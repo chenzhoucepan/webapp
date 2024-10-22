@@ -1,15 +1,24 @@
 <script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
+  const props = defineProps({
+    msg: {
+      type: String,
+      required: true
+    }
+  });
+  const emits = defineEmits(["update:msg"]);
+  const updateMsg = () => {
+    emits('update:msg', "e.target.value")
   }
-})
+
+  function chgMsg(){
+    this.msg += ' === '
+  }
+
 </script>
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="green" @click="updateMsg">{{ props.msg }}</h1>
     <h3>
       You’ve successfully created a project with
       <a href="https://vite.dev/" target="_blank" rel="noopener">Vite</a> +
