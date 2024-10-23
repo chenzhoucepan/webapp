@@ -7,3 +7,5 @@ const prisma = new PrismaClient({
         databaseUrl: 'd1:10f27a51-4088-45c1-a1a4-0e55312510ae',
     }),
 });
+
+export default prisma;
