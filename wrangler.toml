@@ -17,5 +17,5 @@ send_metrics = true
 
 [[d1_databases]]
 binding = "DB"
-database_name = "shy-darkness-cc55-db"
-database_id = "1dd4f615-063c-409b-942c-ba833dac850b"
+database_name = "cc55"
+database_id = "89a27a04-ad0e-4999-acdf-8b5e38a034ff"
