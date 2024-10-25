@@ -9,6 +9,26 @@
 
   self.addEventListener('fetch', (event) => {
     const url = new URL(event.request.url);
+    console.log('--------------------')
+
+    if (pathname === "/api/beverages") {
+      if (env.DB) {
+        // 使用 env.DB.prepare
+      console.log('-------------0');
+      } else {
+        console.log('env.DB is undefined');
+      }
+      // If you did not use `DB` as your binding name, change it here
+      const { results } = env.DB.prepare(
+        "SELECT * FROM Customers WHERE CompanyName = ?"
+      )
+        .bind("Bs Beverages")
+        .all();
+      return new Response(JSON.stringify(results), {
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+
     if (url.pathname === '/') {
       event.respondWith(
         new Response(text, {
