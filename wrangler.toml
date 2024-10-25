@@ -1,3 +1,20 @@
+name = "my-first-worker"
+type = "webpack"
+route = ''
+account_id='ccba2188822bbf80b13afca966e4484e'
+zone_id = '82777b7f160da654b1876ceb432155ea'
+usage_model = 'bundled'
+compatibility_flags = []
+workers_dev = true
+compatibility_date = "2024-10-25"
+
+send_metrics = true
+
+     main = "worker.js"
+[build]
+     command = "npm run build"
+     publish = "dist"
+
 [[d1_databases]]
 binding = "DB"
 database_name = "shy-darkness-cc55-db"
