@@ -1,4 +1,4 @@
-name = "my-first-worker"
+name = "webapp"
 type = "webpack"
 route = ''
 account_id='ccba2188822bbf80b13afca966e4484e'
